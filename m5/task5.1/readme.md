@@ -1,9 +1,9 @@
-#Part 1
+# Part 1
   
-##2  
+## 2  
 /etc/passwd  
 
-##3
+## 3
   
 * USER - username
 * TTY - terminal name
@@ -14,7 +14,7 @@
 * WHAT - current process
 * PCPU - time that was used by current process  
 
-##part2-2
+## part2-2
 file  
 
 
