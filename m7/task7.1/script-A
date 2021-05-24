@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#FUNCTIONS
+
+function noparam {
+	echo "Use --all key to display the IP addresses and symbolic names of all hosts in the current subnet"
+	echo "Use --target key to display a list of open system TCP ports"
+}
+
+function all {
+	grep ".\{1,4\}\." /etc/hosts 
+}
+
+function target {
+	ss | grep tcp
+}
+
+#MAIN
+#while getopts  ":zy" option
+#do
+	case $1 in
+	--all) all ;;
+	--target) target ;;
+	"") noparam ;;
+	*) echo "Invalid parameter $1"; noparam
+	esac
+#done
